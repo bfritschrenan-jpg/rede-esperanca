@@ -1,48 +1,106 @@
 # Rede Esperança
 
-Projeto acadêmico de desenvolvimento front-end para uma plataforma fictícia de organização social. Apresenta as áreas de atuação da ONG, seus projetos e um formulário para pessoas interessadas em colaborar como voluntárias, doadoras ou parceiras.
+Plataforma web académica para uma ONG fictícia, desenvolvida para apresentar iniciativas sociais e permitir o registo de voluntários, doadores e parceiros.
 
 ## Funcionalidades
 
-- Navegação entre Início, Projetos e Cadastro sem recarregar o documento principal.
-- Menu responsivo com submenu.
-- Exibição de projetos a partir de dados JavaScript.
-- Formulário com validação de campos e máscaras para CPF, telefone e CEP.
-- Armazenamento local dos dados do cadastro no navegador.
-- Componentes visuais de feedback, como etiquetas, alerta e notificação toast.
+- Página inicial com apresentação da Rede Esperança.
+- Consulta de projetos e iniciativas sociais.
+- Formulário de cadastro de colaboradores.
+- Validação de CPF, telefone, CEP e campos obrigatórios.
+- Armazenamento local dos dados do formulário no navegador.
+- Navegação responsiva entre as páginas.
+- Recursos de acessibilidade no formulário.
 
-## Tecnologias
+## Tecnologias utilizadas
 
-HTML, CSS e JavaScript com módulos nativos. O projeto não possui uma etapa de instalação de dependências.
+- HTML5 para a estrutura e a semântica das páginas.
+- CSS3 para estilos, layout e responsividade.
+- JavaScript ES Modules para interatividade e regras de negócio.
+- `localStorage` para persistência local dos dados do formulário.
+- Git e GitHub para versionamento e colaboração.
 
-## Como executar localmente
+## Estrutura do projeto
 
-1. Obtenha os arquivos do projeto e abra a pasta `ong_esperanca` no editor.
-2. Inicie um servidor local, como o Five Server no VS Code.
-3. Abra `html/index.html` por esse servidor.
-4. Use o menu para acessar Início, Projetos e Cadastro.
+```text
+rede-esperanca/
+├── css/
+│   └── style.css
+├── html/
+│   ├── index.html
+│   ├── inicio.html
+│   ├── cadastro.html
+│   └── projetos.html
+├── img/
+├── js/
+│   ├── app.js
+│   ├── formulario.js
+│   ├── menu.js
+│   ├── navegacao.js
+│   ├── projetos.js
+│   ├── storage.js
+│   └── templates.js
+└── README.md
+```
 
-O servidor local é necessário porque a navegação carrega arquivos HTML com `fetch()`. Abrir o arquivo diretamente pelo endereço `file://` pode impedir esse carregamento.
+## Pré-requisitos
 
-## Estrutura principal
+- Git para clonar o repositório.
+- Um navegador atualizado.
+- Visual Studio Code é recomendado.
+- A extensão Live Server é opcional, mas recomendada para executar o projeto localmente.
 
-- `html/index.html`: documento principal, cabeçalho, área de conteúdo e rodapé.
-- `html/inicio.html`: conteúdo da página inicial.
-- `html/projetos.html`: conteúdo da página de projetos.
-- `html/cadastro.html`: formulário de cadastro.
-- `css/style.css`: estilos e responsividade.
-- `js/app.js`: inicialização dos módulos.
-- `js/modulos/navegacao.js`: navegação e carregamento dos conteúdos.
-- `js/modulos/menu.js`: comportamento do menu.
-- `js/modulos/formulario.js`: máscaras e validação do cadastro.
-- `js/modulos/storage.js`: gravação e leitura no armazenamento local.
-- `js/modulos/templates.js` e `js/dados/projetos.js`: apresentação e dados dos projetos.
-- `img/voluntarios.jpg`: imagem utilizada na interface.
+Não é necessário instalar dependências npm, pois o projeto utiliza HTML, CSS e JavaScript nativo.
 
-## Limitações e uso dos dados
+## Instalação local
 
-Este é um protótipo acadêmico: não há integração com back-end, banco de dados ou envio efetivo de cadastros à ONG. Os dados preenchidos ficam no `localStorage` do navegador utilizado e podem ser restaurados ao voltar ao formulário. Para testes, use somente dados fictícios; não informe CPF nem outros dados pessoais reais.
+Clone o repositório e aceda à pasta do projeto:
 
-## Versionamento
+```bash
+git clone https://github.com/bfritschrenan-jpg/rede-esperanca.git
+cd rede-esperanca
+```
 
-O projeto usa `main` para a versão de lançamento e `develop` para integrar o desenvolvimento. Novas alterações são trabalhadas em branches `feature/` criadas a partir de `develop`, revisadas e depois integradas a ela. Correções urgentes podem ser trabalhadas em branches `hotfix/` quando necessárias.
+Abra a pasta no Visual Studio Code:
+
+```bash
+code .
+```
+
+Para executar, abra o ficheiro `html/index.html` no navegador ou use a extensão Live Server no VS Code. Com o Live Server, clique com o botão direito em `html/index.html` e selecione **Open with Live Server**.
+
+## Build e testes
+
+Este é um projeto front-end estático. Não há processo de build nem dependências externas obrigatórias. Também não há uma suíte de testes automatizados configurada neste momento. A validação pode ser feita executando a aplicação no navegador e verificando a navegação, o formulário, as mensagens de validação e o armazenamento local.
+
+## Versionamento e colaboração
+
+O projeto utiliza GitFlow simplificado:
+
+- `main`: versão estável do projeto.
+- `develop`: integração das funcionalidades em desenvolvimento.
+- `feature/*`: implementação de tarefas isoladas.
+
+As alterações devem ser registadas em commits descritivos e enviadas para o GitHub. Issues são usadas para descrever tarefas, milestones para agrupar objetivos de uma entrega e pull requests para rever e integrar branches de funcionalidade em `develop`.
+
+Exemplo de fluxo:
+
+```bash
+git switch develop
+git pull origin develop
+git switch -c feature/nova-funcionalidade
+# realizar alterações
+git add .
+git commit -m "feat: descreve a nova funcionalidade"
+git push -u origin feature/nova-funcionalidade
+```
+
+Depois, deve ser aberta uma pull request da branch de funcionalidade para `develop`, com uma descrição do contexto, das alterações e dos testes realizados.
+
+## Acessibilidade
+
+O formulário utiliza labels associados aos campos, agrupamento com `fieldset` e `legend`, identificação de campos obrigatórios com `required` e `aria-required`, além de `role="status"` e `aria-live` para comunicar mensagens de retorno.
+
+## Licença
+
+Projeto académico desenvolvido para fins educacionais.
