@@ -1,0 +1,180 @@
+<section class="pagina-topo" aria-labelledby="titulo-cadastro">
+    <div class="container">
+        <p class="texto-destaque">Faça parte da nossa rede</p>
+        <h1 id="titulo-cadastro">Cadastro de colaboradores</h1>
+        <p>
+            Preencha seus dados para se tornar voluntário, doador ou parceiro
+            da Rede Esperança.
+        </p>
+    </div>
+</section>
+
+<section class="container secao-formulario" aria-label="Formulário de cadastro">
+    <form id="form-cadastro" class="formulario">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+
+            <div class="grupo-campos">
+                <div class="campo campo-largo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" minlength="3"
+                        required autocomplete="name">
+                </div>
+
+                <div class="campo">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric"
+                        maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required autocomplete="off">
+                    <small>Formato: 000.000.000-00</small>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contato</legend>
+
+            <div class="grupo-campos">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required
+                        autocomplete="email">
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone ou WhatsApp</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" inputmode="numeric"
+                        maxlength="15" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" required autocomplete="tel">
+                    <small>Formato: (00) 00000-0000</small>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+
+            <div class="grupo-campos">
+                <div class="campo">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" placeholder="00000-000" inputmode="numeric" maxlength="9"
+                        pattern="\d{5}-\d{3}" required autocomplete="postal-code">
+                    <small>Formato: 00000-000</small>
+                </div>
+
+                <div class="campo campo-largo">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, avenida ou travessa"
+                        minlength="3" required autocomplete="address-line1">
+                </div>
+
+                <div class="campo">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" name="numero" placeholder="Ex.: 123" required>
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required
+                        autocomplete="address-level2">
+                </div>
+
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Como deseja colaborar?</legend>
+
+            <div class="opcoes">
+                <div>
+                    <input type="radio" id="voluntario" name="tipo-colaboracao" value="Voluntário" required>
+                    <label for="voluntario">Quero ser voluntário(a)</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="doador" name="tipo-colaboracao" value="Doador">
+                    <label for="doador">Quero realizar doações</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="parceiro" name="tipo-colaboracao" value="Parceiro">
+                    <label for="parceiro">Quero ser parceiro(a)</label>
+                </div>
+            </div>
+
+            <div class="campo campo-largo">
+                <label for="interesse">Área de interesse</label>
+                <select id="interesse" name="interesse" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Inclusão digital">Inclusão digital</option>
+                    <option value="Capacitação profissional">Capacitação profissional</option>
+                    <option value="Eventos e campanhas">Eventos e campanhas</option>
+                    <option value="Outras áreas">Outras áreas</option>
+                </select>
+            </div>
+
+            <div class="campo campo-largo">
+                <label for="mensagem">Mensagem ou observação</label>
+                <textarea id="mensagem" name="mensagem" rows="5"
+                    placeholder="Conte-nos como você gostaria de ajudar."></textarea>
+            </div>
+        </fieldset>
+
+        <div class="campo-termo">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">
+                Li e concordo com o uso dos meus dados exclusivamente para fins
+                de contato e participação nas atividades da ONG.
+            </label>
+        </div>
+
+        <button type="submit" class="botao">
+            Enviar cadastro
+        </button>
+
+        <p id="mensagem-formulario" class="mensagem-formulario" aria-live="polite"></p>
+    </form>
+</section>
