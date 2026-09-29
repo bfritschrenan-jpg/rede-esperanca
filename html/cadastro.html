@@ -18,18 +18,18 @@
                 <div class="campo campo-largo">
                     <label for="nome">Nome completo</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" minlength="3"
-                        required autocomplete="name">
+                        required aria-required="true" autocomplete="name">
                 </div>
 
                 <div class="campo">
                     <label for="nascimento">Data de nascimento</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
+                    <input type="date" id="nascimento" name="nascimento" required aria-required="true">
                 </div>
 
                 <div class="campo">
                     <label for="cpf">CPF</label>
                     <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric"
-                        maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required autocomplete="off">
+                        maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required aria-required="true" autocomplete="off">
                     <small>Formato: 000.000.000-00</small>
                 </div>
             </div>
@@ -41,14 +41,14 @@
             <div class="grupo-campos">
                 <div class="campo">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required aria-required="true"
                         autocomplete="email">
                 </div>
 
                 <div class="campo">
                     <label for="telefone">Telefone ou WhatsApp</label>
                     <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" inputmode="numeric"
-                        maxlength="15" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" required autocomplete="tel">
+                        maxlength="15" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" required aria-required="true" autocomplete="tel">
                     <small>Formato: (00) 00000-0000</small>
                 </div>
             </div>
@@ -61,35 +61,35 @@
                 <div class="campo">
                     <label for="cep">CEP</label>
                     <input type="text" id="cep" name="cep" placeholder="00000-000" inputmode="numeric" maxlength="9"
-                        pattern="\d{5}-\d{3}" required autocomplete="postal-code">
+                        pattern="\d{5}-\d{3}" required aria-required="true" autocomplete="postal-code">
                     <small>Formato: 00000-000</small>
                 </div>
 
                 <div class="campo campo-largo">
                     <label for="endereco">Endereço</label>
                     <input type="text" id="endereco" name="endereco" placeholder="Rua, avenida ou travessa"
-                        minlength="3" required autocomplete="address-line1">
+                        minlength="3" required aria-required="true" autocomplete="address-line1">
                 </div>
 
                 <div class="campo">
                     <label for="numero">Número</label>
-                    <input type="text" id="numero" name="numero" placeholder="Ex.: 123" required>
+                    <input type="text" id="numero" name="numero" placeholder="Ex.: 123" required aria-required="true">
                 </div>
 
                 <div class="campo">
                     <label for="bairro">Bairro</label>
-                    <input type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" required>
+                    <input type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" required aria-required="true">
                 </div>
 
                 <div class="campo">
                     <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required
+                    <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required aria-required="true"
                         autocomplete="address-level2">
                 </div>
 
                 <div class="campo">
                     <label for="estado">Estado</label>
-                    <select id="estado" name="estado" required>
+                    <select id="estado" name="estado" required aria-required="true">
                         <option value="">Selecione</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -128,7 +128,7 @@
 
             <div class="opcoes">
                 <div>
-                    <input type="radio" id="voluntario" name="tipo-colaboracao" value="Voluntário" required>
+                    <input type="radio" id="voluntario" name="tipo-colaboracao" value="Voluntário" required aria-required="true">
                     <label for="voluntario">Quero ser voluntário(a)</label>
                 </div>
 
@@ -145,7 +145,7 @@
 
             <div class="campo campo-largo">
                 <label for="interesse">Área de interesse</label>
-                <select id="interesse" name="interesse" required>
+                <select id="interesse" name="interesse" required aria-required="true">
                     <option value="">Selecione uma opção</option>
                     <option value="Educação">Educação</option>
                     <option value="Alimentação">Alimentação</option>
@@ -164,7 +164,7 @@
         </fieldset>
 
         <div class="campo-termo">
-            <input type="checkbox" id="termos" name="termos" required>
+            <input type="checkbox" id="termos" name="termos" required aria-required="true">
             <label for="termos">
                 Li e concordo com o uso dos meus dados exclusivamente para fins
                 de contato e participação nas atividades da ONG.
@@ -175,6 +175,6 @@
             Enviar cadastro
         </button>
 
-        <p id="mensagem-formulario" class="mensagem-formulario" aria-live="polite"></p>
+        <p id="mensagem-formulario" class="mensagem-formulario" role="status" aria-live="polite"></p>
     </form>
 </section>
