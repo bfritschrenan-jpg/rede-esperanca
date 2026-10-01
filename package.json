@@ -1,0 +1,28 @@
+{
+  "name": "ong_esperanca",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Plataforma web académica para uma ONG fictícia, desenvolvida para apresentar iniciativas sociais e permitir o registo de voluntários, doadores e parceiros.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfritschrenan-jpg/rede-esperanca.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bfritschrenan-jpg/rede-esperanca/issues"
+  },
+  "homepage": "https://github.com/bfritschrenan-jpg/rede-esperanca#readme",
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "vite": "^8.3.2"
+  }
+}
