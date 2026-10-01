@@ -180,12 +180,16 @@ img {
 }
 
 .texto-destaque {
-    color: var(--cor-secundaria);
+    color: #6b4000;
     font-size: var(--fonte-sm);
     font-weight: bold;
     letter-spacing: 0.08rem;
     margin-bottom: var(--espaco-3);
     text-transform: uppercase;
+}
+
+.banner .texto-destaque {
+    color: #fff3cc;
 }
 
 .banner h1,
@@ -889,8 +893,8 @@ small {
 
 .alerta-alerta {
     background-color: var(--cor-secundaria-clara);
-    border-color: var(--cor-alerta);
-    color: var(--cor-alerta);
+    border-color: #5c3b00;
+    color: #5c3b00;
 }
 
 
@@ -954,4 +958,13 @@ small {
 .toast-alerta {
     background-color: var(--cor-alerta);
     color: var(--cor-branca);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #1f2933;
+    outline-offset: 3px;
 }
