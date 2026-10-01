@@ -2,9 +2,9 @@ import { iniciarFormulario } from "./formulario.js";
 import { renderizarProjetos } from "./templates.js";
 
 const paginas = {
-    inicio: "inicio.html",
-    projetos: "projetos.html",
-    cadastro: "cadastro.html"
+    inicio: "/html/inicio.html",
+    projetos: "/html/projetos.html",
+    cadastro: "/html/cadastro.html"
 };
 
 function obterPaginaAtual() {
